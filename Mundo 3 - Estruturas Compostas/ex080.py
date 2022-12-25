@@ -10,13 +10,12 @@ for i in range(0, 5):
     else:
         num = int(input('Digite um valor: '))
         for i in range(0, len(lista)):
-            if len(lista) == 1:
-                if max(lista) > num:
-                    lista.insert(0, num)
-                    print('Adicionado na posição 0 da lista...')
-            if min(lista) > num:
+            if num > max(lista):
+                lista.insert(-1, num)
+                print('Adicionado ao final da lista...')
+            if num < min(lista):
                 lista.insert(0, num)
                 print('Adicionado na posição 0 da lista...')
-print('-=') * 30
+print('-=' * 30)
 
 print(f'Os valores digitados em ordem foram {lista}')
