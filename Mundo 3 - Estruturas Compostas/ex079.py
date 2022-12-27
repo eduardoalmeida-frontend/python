@@ -19,8 +19,8 @@ while True:
             while op.upper() not in 'SN':
                 op = str(input('Opção inválida. Quer continuar? [S/N] '))
     else:
-        print('-=' * 30)
         break
 
+print('-=' * 30)
 lista.sort()
 print(f'Você digitou os valores {lista}')
