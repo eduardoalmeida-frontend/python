@@ -5,13 +5,11 @@
 # C) se o valor 5 foi digitado e está ou não na lista.
 
 lista = []
-qty = 0
 op = 'S'
 
 while True:
     if op.upper() == 'S':
         lista.append(int(input('Digite um valor: ')))
-        qty += 1
         op = str(input('Quer continuar? [S/N] '))
         while op.upper() not in 'SN':
             op = str(input('Opção inválida. Quer continuar? [S/N] '))
@@ -19,8 +17,7 @@ while True:
         break
 
 print('-=' * 30)
-
-print(f'Você digitou {qty} elementos.')
+print(f'Você digitou {len(lista)} elementos.')
 lista.sort(reverse=True)
 print(f'Os valores em ordem decrescente são {lista}')
 
