@@ -11,13 +11,11 @@ while True:
     if op.upper() == 'S':
         num = int(input('Digite um valor: '))
         lista.append(num)
-        op = str(input('Quer continuar? [S/N] '))
-        while op.upper() not in 'SN':
-            op = str(input('Opção inválida. Quer continuar? [S/N] '))
     else:
         break
-
-print('-=' * 30)
+    op = str(input('Quer continuar? [S/N] '))
+    while op.upper() not in 'SN':
+        op = str(input('Opção inválida. Quer continuar? [S/N] '))
 
 for i in lista:
     if i % 2 == 0:
@@ -25,6 +23,7 @@ for i in lista:
     else:
         lista_impar.append(i)
 
+print('-=' * 30)
 print(f'A lista completa é {lista}')
 print(f'A lista de pares é {lista_par}')
 print(f'A lista de ímpares é {lista_impar}')
